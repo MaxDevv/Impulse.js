@@ -1,6 +1,6 @@
 {
   "name": "pressurize-js",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "The First Open-Source JavaScript Pressure Detection Library for All Mobile Devices Without Specialized Hardware",
   "keywords": [
     "pressure",

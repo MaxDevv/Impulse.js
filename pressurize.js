@@ -52,16 +52,16 @@ function start(processingInterval = 75) {
         // Instead of getting the max one, ill get like the top 3 and average them out
         pressure = average(motionList.slice(Math.max(Math.round(motionList.length - range), 0)).sort((a, b) => b - a).slice(0, 3).map((_, i) => Number(_)));
 
-        // let trueMotion = [];
-        // const motMode = mode(motionList);
-        // for (let motion of motionList) {
-        //     if (motion > motMode) {
-        //         trueMotion.push(motion);
-        //     }
-        // }
+        let trueMotion = [];
+        const motMode = mode(motionList);
+        for (let motion of motionList) {
+            if (motion < motMode*7.5) {
+                trueMotion.push(motion);
+            }
+        }
 
         // pressure = Math.log(pressure/mode(trueMotion))/Math.log(10);
-        pressure = pressure/mode(motionList);
+        pressure = pressure/mode(trueMotion);
 
         // pressure *= 0.8;
 
