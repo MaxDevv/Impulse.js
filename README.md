@@ -149,7 +149,7 @@ if (typeof DeviceMotionEvent.requestPermission === 'function') {
 ```
 
 ## Examples
-Check out the examples directory for sample implementations showing how to use pressurize.js in various scenarios.
+Check out the examples in the website for more detailed usage and implementation examples.
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
