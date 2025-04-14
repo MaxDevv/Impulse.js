@@ -1,0 +1,42 @@
+{
+  "name": "impulse-js",
+  "version": "1.0.0",
+  "description": "The First Open-Source JavaScript Pressure Detection Library for All Mobile Devices Without Specialized Hardware",
+  "keywords": [
+    "pressure",
+    "velocity",
+    "impulse-js",
+    "touch-pressure",
+    "force-touch",
+    "3d-touch",
+    "pressure-detection",
+    "accelerometer",
+    "gyroscope",
+    "motion-sensors",
+    "mobile-input",
+    "touch-interaction",
+    "pressure-sensitivity",
+    "javascript-sensors",
+    "web-sensors",
+    "device-motion",
+    "input-detection",
+    "touch-force",
+    "no-hardware"
+  ]
+,
+  "homepage": "https://github.com/MaxDevv/Impulse.js#readme",
+  "bugs": {
+    "url": "https://github.com/MaxDevv/Impulse.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxDevv/Impulse.js.git"
+  },
+  "license": "ISC",
+  "author": "MaxDevv :D",
+  "type": "commonjs",
+  "main": "Impulse.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
