@@ -1,12 +1,12 @@
-# Impulse.js
+# pressurize.js
 
 ## Overview
-Impulse.js is a groundbreaking JavaScript library that enables pressure detection on mobile devices without requiring built-in pressure sensors like 3D Touch. By leveraging the device's accelerometer and gyroscopic sensors, Impulse.js calculates the relative pressure exerted with each touch interaction, providing a new dimension of user input for web applications.
+pressurize.js is a groundbreaking JavaScript library that enables pressure detection on mobile devices without requiring built-in pressure sensors like 3D Touch. By leveraging the device's accelerometer and gyroscopic sensors, pressurize.js calculates the relative pressure exerted with each touch interaction, providing a new dimension of user input for web applications.
 
-This library is the first of its kind, offering web developers the ability to detect pressure sensitivity on any modern mobile device (and even some laptops :D) equipped with motion sensors. Impulse.js opens up new possibilities for creating more intuitive and responsive user interfaces in web applications.
+This library is the first of its kind, offering web developers the ability to detect pressure sensitivity on any modern mobile device (and even some laptops :D) equipped with motion sensors. pressurize.js opens up new possibilities for creating more intuitive and responsive user interfaces in web applications.
 
 ## How It Works
-Impulse.js works by:
+pressurize.js works by:
 1. Capturing motion and rotation data from the device's sensors
 2. Processing this data to calculate relative pressure based on device movement during touch events
 3. Normalizing the values to provide a consistent pressure reading between 0 and 1
@@ -22,12 +22,12 @@ The library uses sophisticated algorithms to filter and process the sensor data,
 
 ## Installation
 ```bash
-npm install impulse-js
+npm install pressurize-js
 ```
 
 ## Basic Usage
 ```javascript
-import { start, getPressure } from 'impulse-js';
+import { start, getPressure } from 'pressurize-js';
 
 // Initialize the pressure detection
 start();
@@ -65,7 +65,7 @@ Returns the current calculated pressure value.
 - A normalized pressure value between 0 and 1, where 0 represents minimal pressure and 1 represents maximum detected pressure.
 
 ## Browser Compatibility
-Impulse.js requires devices with accelerometer and gyroscopic sensors. It works on most modern smartphones and tablets with these capabilities.
+pressurize.js requires devices with accelerometer and gyroscopic sensors. It works on most modern smartphones and tablets with these capabilities.
 
 ## Permissions
 Your web application must request permission to access device motion and orientation events. This typically requires a user interaction (like a button click) before the following code:
@@ -73,13 +73,13 @@ Your web application must request permission to access device motion and orienta
 
 ## Implementation and usage of `requestAndStart`
 
-The `requestAndStart` function is the recommended way to initialize Impulse.js because it handles the permission requirements for iOS devices while also starting the pressure detection system. Here's how it works and why it's important:
+The `requestAndStart` function is the recommended way to initialize pressurize.js because it handles the permission requirements for iOS devices while also starting the pressure detection system. Here's how it works and why it's important:
 
 
-### Using Impulse.js with Permission Handling
+### Using pressurize.js with Permission Handling
 
 #### `requestAndStart(processingInterval = 75)`
-This is the recommended function to initialize Impulse.js, as it handles device motion permissions properly.
+This is the recommended function to initialize pressurize.js, as it handles device motion permissions properly.
 
 **Parameters:**
 - `processingInterval` (optional): Defines how frequently (in milliseconds) the pressure value is updated. Default is 75ms.
@@ -89,7 +89,7 @@ iOS devices require explicit user permission before accessing device motion and 
 
 **Example usage:**
 ```javascript
-import { requestAndStart, getPressure } from 'impulse-js';
+import { requestAndStart, getPressure } from 'pressurize-js';
 
 // Create a button for user interaction
 const button = document.getElementById('start-button');
@@ -116,7 +116,7 @@ Apple's iOS requires that DeviceMotionEvent permissions must be requested in res
 If you try to request these permissions without a user gesture:
 1. The permission request will be rejected
 2. Your application won't be able to access motion data
-3. Impulse.js won't function properly
+3. pressurize.js won't function properly
 
 This is why the demo page includes a button with the text "Request shig" that calls `DeviceMotionEvent.requestPermission()` - it's demonstrating this required user interaction.
 
@@ -149,7 +149,7 @@ if (typeof DeviceMotionEvent.requestPermission === 'function') {
 ```
 
 ## Examples
-Check out the examples directory for sample implementations showing how to use Impulse.js in various scenarios.
+Check out the examples directory for sample implementations showing how to use pressurize.js in various scenarios.
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
